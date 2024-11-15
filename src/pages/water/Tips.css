@@ -7,6 +7,7 @@
 .tips-content .info-container {
   flex-direction: column;
   width: 95%;
+  max-height: 92vh;
 }
 
 .tips-content.active .title {

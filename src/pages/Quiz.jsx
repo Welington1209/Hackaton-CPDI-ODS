@@ -20,7 +20,7 @@ const Quiz = () => {
     recentScores,
   } = state;
 
-  const url = "https://www.notion.so/Mercado-6f5c24fb988a4d07ab59568c7aa82ec9";
+  const url = "https://welington1209.github.io/Hackaton-CPDI-ODS";
 
   const currentQuestion = shuffledQuestions[currentStep];
 
@@ -228,17 +228,17 @@ const Quiz = () => {
           </div>
 
           <div className="themes-container">
-          <LinkedinShareButton url={url} title="teste" hashtag="ODS">
-            <span className="button">Compartilhar no LinkedIn</span>
-          </LinkedinShareButton>
+            <LinkedinShareButton url={url} title="teste" hashtag="ODS">
+              <span className="button">Compartilhar no LinkedIn</span>
+            </LinkedinShareButton>
 
-          <WhatsappShareButton url={url} title="teste">
-            <span className="button">Compartilhar no WhatsApp</span>
-          </WhatsappShareButton>
+            <WhatsappShareButton url={url} title="teste">
+              <span className="button">Compartilhar no WhatsApp</span>
+            </WhatsappShareButton>
 
-          <FacebookShareButton url={url} hashtag="#ODS">
-            <span className="button">Compartilhar no Facebook</span>
-          </FacebookShareButton>
+            <FacebookShareButton url={url} hashtag="#ODS">
+              <span className="button">Compartilhar no Facebook</span>
+            </FacebookShareButton>
           </div>
 
           <button className="button" onClick={resetGame}>

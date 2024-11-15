@@ -4,7 +4,12 @@ import "./index.css";
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import Intro from "./pages/water/Intro.jsx";
 import Video from "./pages/water/Video.jsx";
 import Water from "./pages/Water.jsx";
@@ -18,7 +23,7 @@ import AgroTipsPage from "./pages/agriculture/AgroTips.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Router basename="/Hackaton-CPDI-ODS">
+    <BrowserRouter basename="/Hackaton-CPDI-ODS">
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
@@ -41,6 +46,6 @@ createRoot(document.getElementById("root")).render(
           </Route>
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   </StrictMode>
 );
