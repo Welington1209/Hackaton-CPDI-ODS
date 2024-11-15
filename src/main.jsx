@@ -18,9 +18,9 @@ import AgroTipsPage from "./pages/agriculture/AgroTips.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Router>
+    <Router basename="/Hackaton-CPDI-ODS">
       <Routes>
-        <Route path="/Hackaton-CPDI-ODS" element={<App />}>
+        <Route path="/" element={<App />}>
           <Route index element={<Home />} />
 
           <Route path="water" element={<Water />}>
