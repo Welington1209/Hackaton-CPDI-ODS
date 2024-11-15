@@ -1,12 +1,13 @@
-import farmImage from "../src/img/farm-svgrepo-com.svg";
-import foodWasteImage from "../src/img/food-waste-svgrepo-com.svg";
-import organicFarmImage from "../src/img/organic-farm-svgrepo-com.svg";
-import vegetableDishImage from "../src/img/vegetable-dish-svgrepo-com.svg";
-import gardenImage from "../src/img/garden-svgrepo-com.svg";
-import policyImage from "../src/img/policy-svgrepo-com.svg";
-import teachingImage from "../src/img/teaching-svgrepo-com.svg";
-import farmersMarketImage from "../src/img/farmers-market-svgrepo-com.svg";
-import ecoFriendlyImage from "../src/img/eco-friendly-svgrepo-com.svg";
+import farmImage from "../img/save-water-svgrepo-com.svg";
+import foodWasteImage from "../img/water-tap-plumber-svgrepo-com.svg";
+import organicFarmImage from "../img/ecology-green-svgrepo-com.svg";
+import vegetableDishImage from "../img/sprout-tree-svgrepo-com.svg";
+import gardenImage from "../img/toilet-svgrepo-com.svg";
+import policyImage from "../img/teach-svgrepo-com.svg";
+import teachingImage from "../img/light-bulb-idea-svgrepo-com.svg";
+
+import farmersMarketImage from "../img/streaming-waves-svgrepo-com.svg";
+import ecoFriendlyImage from "../img/waste-barrel-svgrepo-com.svg";
 
 const agroTipsData = [
   {
