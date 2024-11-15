@@ -1,0 +1,27 @@
+.content {
+  max-width: 100vw;
+  min-height: 94vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  background-image: url("../img/svg.svg");
+}
+
+.content::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  background-position: top;
+  background-image: url("../img/onda.jpg");
+  background-size: cover;
+}

@@ -1,0 +1,157 @@
+.tips-content {
+  height: 94vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.tips-content .info-container {
+  flex-direction: column;
+  width: 95%;
+}
+
+.tips-content.active .title {
+  margin-bottom: 0;
+}
+
+.tips-content ul {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tips-content li {
+  border: 1px solid;
+  border-radius: 1rem;
+  display: flex;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s;
+  align-items: center;
+  background-color: #d3d3d4;
+  animation: spin 5s forwards;
+}
+
+.tips-content li:hover {
+  scale: 1.05;
+}
+
+.tips-content li:nth-child(even) {
+  animation-delay: 1s;
+}
+
+.tips-content li div {
+  display: flex;
+  flex-direction: column;
+}
+
+.tips-content div h3 {
+  margin-bottom: 1rem;
+}
+
+.tips-content li p {
+  width: 90%;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.tips-content .btn-control .back-chapter-btn {
+  left: -2%;
+}
+
+@media (max-width: 450px) {
+  .info-container ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tips-content .info-container li {
+    position: relative;
+    background-color: none;
+    background-color: #000;
+    color: #fafafa;
+  }
+
+  .info-container li:before {
+    background-image: url("../../img/ecology-green-svgrepo-com.svg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    content: "";
+  }
+
+  .info-container li p {
+    z-index: 1;
+    font-weight: bold;
+  }
+
+  .info-container li img {
+    width: 8rem;
+    height: 8rem;
+    display: none;
+  }
+
+  .info {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    height: 100%;
+    padding: 1rem;
+    min-width: 90%;
+    z-index: 1;
+  }
+
+  .info:first-child {
+    border: none;
+  }
+
+  .btn-control a {
+    left: 95%;
+  }
+
+  .btn-control .back-chapter-btn {
+    left: 5%;
+  }
+
+  .tips-content .btn-control .back-chapter-btn {
+    left: 1%;
+  }
+
+  .tips-content .btn-control a {
+    left: 98%;
+  }
+
+  .btn-control button {
+    width: 120px;
+  }
+
+  .tips-content.active {
+    height: 100%;
+  }
+
+  .tips-content.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tips-content ul li:nth-child(3),
+  .tips-content ul li:nth-child(4),
+  .tips-content ul li:nth-child(7) {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}

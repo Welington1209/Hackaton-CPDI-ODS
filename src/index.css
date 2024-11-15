@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+section {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 0.5rem;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  transition: 0.8s;
+  border-radius: 0.5rem;
+  color: #fafafa;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.button:hover {
+  background-color: #d3d3d4;
+  color: #000;
+}
+
+.button.theme {
+  background-color: #d3d3d40f;
+  height: auto;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.button.theme:hover {
+  background-color: #000;
+  color: #fafafa;
+}
+
+.button.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}

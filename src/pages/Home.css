@@ -1,0 +1,119 @@
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.content.agro::before {
+  background-image: url("../img/kseniia-rastvorova-e_HVVvmZ9uU-unsplash.jpg");
+  opacity: 0.4;
+}
+
+.agro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container-home {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.container-home:last-child {
+  position: relative;
+}
+
+.container-home:last-child::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  filter: blur(10px);
+  opacity: 0.5;
+}
+
+.title,
+.paragraph {
+  z-index: 1;
+  color: #fafafa;
+}
+
+#home .title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+  max-width: 70%;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid;
+  padding: 1.2rem;
+}
+
+@media (max-width: 450px) {
+  .container-control {
+    flex-direction: column;
+    min-width: 85vw;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .container-home {
+    min-width: 90%;
+    padding: 0.5rem;
+    padding: 0;
+  }
+
+  .container-home .paragraph {
+    min-width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .container-home img {
+    max-width: 50%;
+  }
+
+  .button {
+    padding: 0;
+  }
+}
+
+.container-home img {
+  width: 80%;
+  animation: rotate 5s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

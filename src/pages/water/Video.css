@@ -1,0 +1,27 @@
+#video {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 94vh;
+}
+
+#video iframe {
+  opacity: 1;
+  z-index: 1;
+  border-radius: 1rem;
+  width: 60%;
+  height: 70vh;
+}
+
+.button {
+  z-index: 1;
+}
+
+@media (max-width: 450px) {
+  iframe {
+    max-height: 200px;
+    min-width: 250px;
+  }
+}
