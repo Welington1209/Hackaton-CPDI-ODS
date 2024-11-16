@@ -44,7 +44,7 @@ const tipsData = [
     title: "Promova o saneamento adequado:",
     paragraphs: [
       "Não jogue lixo, produtos químicos ou medicamentos no vaso sanitário.",
-      "Participe de campanhas locais para promover o uso de banheiros adequados e o tratamento de esgoto.",
+      "Participe de campanhas locais para promover o tratamento de esgoto.",
     ],
     imgSrc: toiletImg,
   },
@@ -81,4 +81,3 @@ const tipsData = [
 ];
 
 export default tipsData;
-

@@ -39,7 +39,7 @@ const IntroAgro = () => {
         </div>
       </div>
 
-      <Link className="button" to={"/agriculture/tips"}>
+      <Link className="button" to={"/agriculture/video"}>
         <FaArrowAltCircleRight size={30} />
       </Link>
     </section>

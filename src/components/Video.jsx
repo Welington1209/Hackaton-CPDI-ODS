@@ -3,11 +3,11 @@ import "./Video.css";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Video = () => {
-  const videoUrl = "https://www.youtube.com/embed/ydH9YpoxpsI";
+const Video = ({ videoUrl, prevRoute, nextRoute }) => {
+
   return (
     <section id="video">
-      <Link className="button" to={"/water/intro"}>
+      <Link className="button" to={prevRoute}>
         <FaArrowAltCircleLeft size={30} />
       </Link>
       <iframe
@@ -17,7 +17,7 @@ const Video = () => {
         allowFullScreen
       ></iframe>
 
-      <Link className="button" to={"/water/tips"}>
+      <Link className="button" to={nextRoute}>
         <FaArrowAltCircleRight size={30} />
       </Link>
     </section>
