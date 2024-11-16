@@ -1,6 +1,6 @@
 import React from "react";
 import waterTipsData from "../../data/waterTipsData";
-import Tips from "./Tips";
+import Tips from "../../components/Tips";
 
 const WaterTipsPage = () => {
   return (

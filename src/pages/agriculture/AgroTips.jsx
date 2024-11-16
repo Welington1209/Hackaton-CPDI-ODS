@@ -1,5 +1,5 @@
 import React from "react";
-import Tips from "../water/Tips";
+import Tips from "../../components/Tips";
 import agroTipsData from "../../data/agroTipsData";
 
 const AgroTipsPage = () => {

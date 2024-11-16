@@ -1,5 +1,5 @@
 import React from "react";
-import TipItem from "../../components/TipItem";
+import TipItem from "./TipItem";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Tips.css";

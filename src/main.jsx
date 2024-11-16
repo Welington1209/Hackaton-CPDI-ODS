@@ -13,7 +13,7 @@ import {
 import Intro from "./pages/water/Intro.jsx";
 import Video from "./components/Video.jsx";
 import Water from "./pages/Water.jsx";
-import Tips from "./pages/water/Tips.jsx";
+import Tips from "./components/Tips.jsx";
 import Quiz from "./pages/Quiz.jsx";
 import Agriculture from "./pages/Agriculture.jsx";
 import IntroAgro from "./pages/agriculture/Intro.jsx";
