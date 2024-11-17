@@ -9,10 +9,6 @@
   width: 95%;
 }
 
-.tips-content.active .title {
-  margin-bottom: 0;
-}
-
 .tips-content ul {
   padding: 2rem;
   display: grid;
@@ -46,11 +42,10 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-
 }
 
 .tips-content div h3 {
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
   margin-top: 0;
 }
 
