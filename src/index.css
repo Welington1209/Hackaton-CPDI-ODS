@@ -15,8 +15,7 @@ section {
 }
 
 .button {
-  padding: 0.5rem;
-  height: 180px;
+  padding: 0.6rem;
   display: flex;
   align-items: center;
   transition: 0.8s;
@@ -37,7 +36,7 @@ section {
 .button.theme {
   background-color: #d3d3d40f;
   height: auto;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1rem;
 }
@@ -50,4 +49,28 @@ section {
 .button.disabled {
   pointer-events: none;
   opacity: 0.2;
+}
+
+.inconsolata-text {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.inconsolata-text-medium {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.inconsolata-title {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }

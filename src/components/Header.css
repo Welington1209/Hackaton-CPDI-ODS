@@ -9,6 +9,11 @@
   height: 6vh;
 }
 
+#header h1 {
+  display: flex;
+  align-items: center;
+}
+
 #header:before {
   background-color: #000;
   opacity: 0.4;

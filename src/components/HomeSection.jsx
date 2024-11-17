@@ -22,7 +22,7 @@ const HomeSection = ({
 
             <div className="container-home">
               {paragraphs.map((paragraph, index) => (
-                <p className="paragraph" key={index}>
+                <p className="paragraph inconsolata-text" key={index}>
                   {paragraph}
                 </p>
               ))}

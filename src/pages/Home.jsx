@@ -10,7 +10,7 @@ const { prevRoute, nextRoute, paragraphs } = homeData.waterHome;
 
 const Home = () => {
   return (
-    <section id="home" className="content">
+    <section id="home" className="content inconsolata-text">
       <HomeSection
         prevRoute={prevRoute}
         nextRoute={nextRoute}

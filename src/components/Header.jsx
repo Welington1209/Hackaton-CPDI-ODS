@@ -10,12 +10,14 @@ const Header = () => {
       <Link className="logo-img" to={"/"}>
         <img src={Logo} alt="imagem do planeta terra" />
       </Link>
+
+      <h1 className="inconsolata-title">Espaço ODS</h1>
       <nav>
-        <Link to={"/"} className="link-control">
+        <Link to={"/"} className="link-control inconsolata-title">
           <h2>Home</h2>
         </Link>
 
-        <Link to="/agriculture/quiz" className="link-control">
+        <Link to="/agriculture/quiz" className="link-control inconsolata-title">
           <h2>Quiz</h2>
         </Link>
       </nav>

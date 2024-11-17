@@ -106,21 +106,24 @@ const Quiz = () => {
     <section className="container">
       {!isGameStarted ? (
         <form onSubmit={handleFormSubmit}>
-          <h2>
+          <h3 className="inconsolata-text-medium">
             Agora que você já sabe como contribuir para promover o acesso à água
             potável, combater a fome e apoiar a agricultura sustentável, que tal
             colocar esses conhecimentos em prática?
-          </h2>
+          </h3>
 
-          <h3>
+          <h3 className="inconsolata-text-medium">
             Preencha os campos abaixo para participar do nosso quiz super
             divertido e repleto de conhecimento!
           </h3>
 
           <div className="user-data">
             <div className="input-control">
-              <label htmlFor="name">Nome:</label>
+              <label className="inconsolata-title" htmlFor="name">
+                Nome:
+              </label>
               <input
+                className="inconsolata-text-medium"
                 type="text"
                 id="name"
                 value={userName}
@@ -135,7 +138,9 @@ const Quiz = () => {
             </div>
 
             <div className="input-control">
-              <label htmlFor="birth-date">Data de nascimento:</label>
+              <label className="inconsolata-title" htmlFor="birth-date">
+                Data de nascimento:
+              </label>
               <input
                 type="date"
                 id="birth-date"
@@ -152,120 +157,179 @@ const Quiz = () => {
               />
               {birthDateError && <p className="error">{birthDateError}</p>}
             </div>
-            <button type="submit">Começar</button>
+            <button className="button inconsolata-text-medium" type="submit">
+              Começar
+            </button>
           </div>
         </form>
       ) : isGameOver ? (
         <div className="final-score">
-          <h2>Fim do jogo!</h2>
-          <h3>Pontuação final: {score}</h3>
-
-          {score === 90 && (
-            <>
-              <h3>Parabéns {userName}! Você acertou todas.</h3>
-
-              <p>
-                Você realmente prestou atenção em todas as dicas! Agora, está
-                pronto para colocar em prática tudo o que aprendeu.
-              </p>
-            </>
-          )}
-
-          {score > 45 ? (
-            <>
-              <h3>
-                Parabéns {userName}! Você acertou {score / 10} de{" "}
-                {shuffledQuestions.length} perguntas.
-              </h3>
-              <h4>Mesmo assim, considere estudar novamente:</h4>
-            </>
-          ) : (
-            <>
-              <h3>Que pena {userName}! Você acertou menos da metade.</h3>
-              <h4>Volte nos capítulos citados para melhorar sua nota:</h4>
-            </>
-          )}
-
-          {incorrectThemes.length > 0 && (
-            <div className="themes-container">
-              {incorrectThemes.includes("Água e Saneamento") && (
-                <Link className="button theme" to="/water/intro">
-                  A importância da água
-                </Link>
-              )}
-              {incorrectThemes.includes("Video") && (
-                <Link className="button theme" to="/water/video">
-                  Vídeo IBGE Explica ODS #6
-                </Link>
-              )}
-              {incorrectThemes.includes("Uso Consciente da Água") && (
-                <Link className="button theme" to="/water/tips">
-                  Dicas de consumo consciente da água
-                </Link>
-              )}
-            </div>
-          )}
-
-          {recentScores.length > 0 && (
-            <div>
-              <h4>Suas pontuações recentes:</h4>
-              <ul>
-                {recentScores.map((score, index) => (
-                  <li key={index}>
-                    Pontuação {index + 1}: {score}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <div>
-            <h4>
-              Agora que você já testou seus conhecimentos, que tal compartilhar
-              nas suas redes para que seus amigos possam também aprender e se
-              divertir com o quiz?
-            </h4>
+          <div className="title-container">
+            <h2 className="inconsolata-title">Fim do jogo!</h2>
+            <h3 className="inconsolata-text-medium">
+              Pontuação final: {score}
+            </h3>
           </div>
 
-          <div className="themes-container">
-            <LinkedinShareButton url={url} title="teste" hashtag="ODS">
-              <span className="button">Compartilhar no LinkedIn</span>
-            </LinkedinShareButton>
+          <div className="final-score-container">
+            <div className="game-over">
+              {score === 180 && (
+                <>
+                  <h3 className="inconsolata-title">
+                    Parabéns {userName}! Você acertou todas.
+                  </h3>
 
-            <WhatsappShareButton url={url} title="teste">
-              <span className="button">Compartilhar no WhatsApp</span>
-            </WhatsappShareButton>
+                  <p className="inconsolata-text-medium">
+                    Você realmente prestou atenção em todas as dicas! Agora,
+                    está pronto para colocar em prática tudo o que aprendeu.
+                  </p>
+                </>
+              )}
 
-            <FacebookShareButton url={url} hashtag="#ODS">
-              <span className="button">Compartilhar no Facebook</span>
-            </FacebookShareButton>
+              {score > 90 ? (
+                <>
+                  <h3 className="inconsolata-title">
+                    Parabéns {userName}! Você acertou {score / 10} de{" "}
+                    {shuffledQuestions.length} perguntas.
+                  </h3>
+                  <h4 className="inconsolata-text-medium">
+                    Mesmo assim, considere estudar novamente:
+                  </h4>
+                </>
+              ) : (
+                <>
+                  <h3 className="inconsolata-title">
+                    Que pena {userName}! Você acertou menos da metade.
+                  </h3>
+                  <h4 className="inconsolata-text-medium">
+                    Volte nos capítulos citados abaixo para melhorar sua nota:
+                  </h4>
+                </>
+              )}
+
+              {incorrectThemes.length > 0 && (
+                <div className="themes-container">
+                  {incorrectThemes.includes("Água e Saneamento") && (
+                    <Link
+                      className="button theme inconsolata-text-medium"
+                      to="/water/intro"
+                    >
+                      A importância da água
+                    </Link>
+                  )}
+                  {incorrectThemes.includes("Video") && (
+                    <Link
+                      className="button theme inconsolata-text-medium"
+                      to="/water/video"
+                    >
+                      Vídeo IBGE Explica ODS #6
+                    </Link>
+                  )}
+                  {incorrectThemes.includes("Uso Consciente da Água") && (
+                    <Link
+                      className="button theme inconsolata-text-medium"
+                      to="/water/tips"
+                    >
+                      Dicas de consumo consciente da água
+                    </Link>
+                  )}
+                </div>
+              )}
+
+              {recentScores.length > 0 && (
+                <div className="recent-scores">
+                  <h4 className="inconsolata-title">
+                    Suas pontuações recentes:
+                  </h4>
+                  <ul>
+                    {recentScores.map((score, index) => (
+                      <li className="inconsolata-text-medium" key={index}>
+                        <p>
+                          Pontuação {index + 1}: {score}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <div className="share">
+              <div>
+                <h4 className="inconsolata-title">
+                  Agora que você já testou seus conhecimentos, que tal
+                  compartilhar nas suas redes para que seus amigos possam também
+                  aprender e se divertir com o quiz?
+                </h4>
+              </div>
+
+              <div className="links-container">
+                <LinkedinShareButton
+                  url={url}
+                  title="🌍 Descubra como você pode ajudar o planeta! Explore dicas incríveis para contribuir com os Objetivos de Desenvolvimento Sustentável e teste seus conhecimentos em um quiz divertido. 💡✅"
+                  hashtag="ODS"
+                >
+                  <span className="in button inconsolata-title">
+                    Compartilhar no LinkedIn
+                  </span>
+                </LinkedinShareButton>
+
+                <WhatsappShareButton
+                  url={url}
+                  title="🌍 Descubra como você pode ajudar o planeta! Explore dicas incríveis para contribuir com os Objetivos de Desenvolvimento Sustentável e teste seus conhecimentos em um quiz divertido. 💡✅"
+                >
+                  <span className="wpp button inconsolata-title">
+                    Compartilhar no WhatsApp
+                  </span>
+                </WhatsappShareButton>
+
+                <FacebookShareButton url={url} hashtag="#ODS">
+                  <span className="fb button inconsolata-title">
+                    Compartilhar no Facebook
+                  </span>
+                </FacebookShareButton>
+              </div>
+
+              <button
+                className="button inconsolata-text-medium"
+                onClick={resetGame}
+              >
+                Reiniciar Quiz
+              </button>
+            </div>
           </div>
-
-          <button className="button" onClick={resetGame}>
-            Reiniciar Quiz
-          </button>
         </div>
       ) : (
         <>
-          <h2>
+          <h2 className="inconsolata-title">
             Você já respondeu: {currentStep} de {shuffledQuestions.length}
           </h2>
-          <h3>Pontuação: {score}</h3>
+          <h3 className="inconsolata-title">Pontuação: {score}</h3>
 
-          <h3>{currentQuestion.question}</h3>
+          <h3 className="inconsolata-text-medium">
+            {currentQuestion.question}
+          </h3>
 
           <div className="options-container">
             {currentQuestion.options.map((option, index) => (
               <button
-                onClick={() => handleAnswerSelect(index)} // Usando index como id
+                onClick={() => handleAnswerSelect(index)}
                 key={index}
-                className={selectedAnswers.includes(index) ? "selected" : ""}
+                className={[
+                  "inconsolata-title",
+                  selectedAnswers.includes(index) ? "selected" : "",
+                ].join(" ")}
               >
                 {option.text}
               </button>
             ))}
           </div>
-          <button onClick={handleSubmitAnswer}>Confirmar Resposta</button>
+          <button
+            className="inconsolata-text-medium button"
+            onClick={handleSubmitAnswer}
+          >
+            Confirmar Resposta
+          </button>
         </>
       )}
     </section>

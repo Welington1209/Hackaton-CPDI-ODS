@@ -13,10 +13,10 @@ const Intro = () => {
       </Link>
 
       <div className="container">
-        <h2 className="title">A importância da água</h2>
+        <h2 className="title inconsolata-title">A importância da água</h2>
 
         <div className="info-container">
-          <p className="info">
+          <p className="info inconsolata-text">
             A água é essencial para a vida e um direito fundamental de todos. No
             entanto, milhões de pessoas ainda carecem de acesso à água potável e
             ao saneamento básico. O ODS 6 da ONU destaca a importância de
@@ -24,7 +24,7 @@ const Intro = () => {
             recursos compromete a saúde, a educação e a qualidade de vida,
             principalmente das comunidades mais vulneráveis.
           </p>
-          <p className="info">
+          <p className="info inconsolata-text">
             Além de promover o bem-estar, a preservação e o uso sustentável da
             água são fundamentais para proteger nossos ecossistemas e construir
             um futuro mais saudável e justo para todos. O manejo inadequado da

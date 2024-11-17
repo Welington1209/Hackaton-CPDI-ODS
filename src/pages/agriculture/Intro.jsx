@@ -15,10 +15,12 @@ const IntroAgro = () => {
       </Link>
 
       <div className="container">
-        <h2 className="title">Fome zero e Agricultura sustentável</h2>
+        <h2 className="title inconsolata-title">
+          Fome zero e Agricultura sustentável
+        </h2>
 
         <div className="info-container">
-          <p className="info">
+          <p className="info inconsolata-text">
             A erradicação da fome é essencial para o desenvolvimento humano e um
             dos grandes objetivos do ODS 2 da ONU. Milhões de pessoas ainda
             enfrentam a insegurança alimentar, sendo fundamental promover
@@ -26,7 +28,7 @@ const IntroAgro = () => {
             alimentação nutritiva e suficiente para todos é uma prioridade para
             a construção de uma sociedade mais justa e saudável.
           </p>
-          <p className="info">
+          <p className="info inconsolata-text">
             Além de combater a fome, o ODS 2 incentiva a agricultura
             sustentável, que valoriza a preservação dos recursos naturais e o
             respeito ao meio ambiente. Práticas agrícolas responsáveis
