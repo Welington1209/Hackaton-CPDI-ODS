@@ -7,7 +7,7 @@
 
 .content.agro::before {
   background-image: url("../img/kseniia-rastvorova-e_HVVvmZ9uU-unsplash.jpg");
-  opacity: .5;
+  opacity: .3;
 }
 
 .agro-container {
@@ -47,6 +47,7 @@
   background-color: #000;
   filter: blur(10px);
   opacity: 0.8;
+
 }
 
 .title,

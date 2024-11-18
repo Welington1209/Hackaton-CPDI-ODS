@@ -17,7 +17,6 @@ const Quiz = () => {
     isGameStarted,
     isGameOver,
     incorrectThemes,
-    recentScores,
   } = state;
 
   const url = "https://welington1209.github.io/Hackaton-CPDI-ODS";
@@ -31,11 +30,10 @@ const Quiz = () => {
   const [birthDateError, setBirthDateError] = useState("");
 
   const handleAnswerSelect = (index) => {
-    setSelectedAnswers(
-      (prev) =>
-        prev.includes(index)
-          ? prev.filter((id) => id !== index) // Desmarca se já estiver marcado
-          : [...prev, index] // Marca se não estiver
+    setSelectedAnswers((prev) =>
+      prev.includes(index)
+        ? prev.filter((id) => id !== index)
+        : [...prev, index]
     );
   };
 
@@ -67,7 +65,9 @@ const Quiz = () => {
     }
   };
 
-  const startGame = () => dispatch({ type: "START_GAME" });
+  const startGame = () => {
+    dispatch({ type: "START_GAME" });
+  };
 
   const handleAnswer = (isCorrect) => {
     if (isCorrect) {
@@ -78,6 +78,10 @@ const Quiz = () => {
     }
 
     if (currentStep >= shuffledQuestions.length - 1) {
+      dispatch({
+        type: "ADD_TO_SCOREBOARD",
+        payload: { name: userName, score },
+      });
       dispatch({ type: "GAME_OVER" });
     } else {
       dispatch({ type: "NEXT_STEP" });
@@ -85,7 +89,6 @@ const Quiz = () => {
   };
 
   const resetGame = () => {
-    dispatch({ type: "ADD_RECENT_SCORES", payload: score });
     dispatch({ type: "RESET_GAME" });
   };
 
@@ -134,7 +137,11 @@ const Quiz = () => {
                   handleInvalid(e, "name", "Por favor, preencha seu nome.")
                 }
               />
-              {nameError && <p className="error">{nameError}</p>}
+              {nameError ? (
+                <p className="error">{nameError}</p>
+              ) : (
+                <p>Queremos saber como te chamar.</p>
+              )}
             </div>
 
             <div className="input-control">
@@ -155,7 +162,14 @@ const Quiz = () => {
                   )
                 }
               />
-              {birthDateError && <p className="error">{birthDateError}</p>}
+              {birthDateError ? (
+                <p className="error">{birthDateError}</p>
+              ) : (
+                <p>
+                  Assim, você nos ajuda a entender melhor a faixa etária do
+                  nosso público.
+                </p>
+              )}
             </div>
             <button className="button inconsolata-text-medium" type="submit">
               Começar
@@ -173,7 +187,7 @@ const Quiz = () => {
 
           <div className="final-score-container">
             <div className="game-over">
-              {score === 180 && (
+              {score === 120 && (
                 <>
                   <h3 className="inconsolata-title">
                     Parabéns {userName}! Você acertou todas.
@@ -181,12 +195,13 @@ const Quiz = () => {
 
                   <p className="inconsolata-text-medium">
                     Você realmente prestou atenção em todas as dicas! Agora,
-                    está pronto para colocar em prática tudo o que aprendeu.
+                    está pronto para compartilhar com os amigos e colocar em
+                    prática tudo o que aprendeu.
                   </p>
                 </>
               )}
 
-              {score > 90 ? (
+              {score >= 60 ? (
                 <>
                   <h3 className="inconsolata-title">
                     Parabéns {userName}! Você acertou {score / 10} de{" "}
@@ -233,20 +248,43 @@ const Quiz = () => {
                       Dicas de consumo consciente da água
                     </Link>
                   )}
+
+                  {incorrectThemes.includes("Fome Zero") && (
+                    <Link
+                      className="button theme inconsolata-text-medium"
+                      to="/agriculture/intro"
+                    >
+                      Fome Zero
+                    </Link>
+                  )}
+
+                  {incorrectThemes.includes("Video Agro") && (
+                    <Link
+                      className="button theme inconsolata-text-medium"
+                      to="/agriculture/video"
+                    >
+                      Video IBGE explica ODS #2
+                    </Link>
+                  )}
+
+                  {incorrectThemes.includes("Dicas Agro") && (
+                    <Link
+                      className="button theme inconsolata-text-medium"
+                      to="/agriculture/tips"
+                    >
+                      Dicas agricultura sustentável
+                    </Link>
+                  )}
                 </div>
               )}
 
-              {recentScores.length > 0 && (
-                <div className="recent-scores">
-                  <h4 className="inconsolata-title">
-                    Suas pontuações recentes:
-                  </h4>
+              {state.scoreBoard.length > 0 && (
+                <div className="score-board">
+                  <h3 className="inconsolata-title">Placar</h3>
                   <ul>
-                    {recentScores.map((score, index) => (
-                      <li className="inconsolata-text-medium" key={index}>
-                        <p>
-                          Pontuação {index + 1}: {score}
-                        </p>
+                    {state.scoreBoard.map((entry, index) => (
+                      <li key={index} className="inconsolata-text-medium">
+                        {entry.name}: {entry.score} pontos
                       </li>
                     ))}
                   </ul>

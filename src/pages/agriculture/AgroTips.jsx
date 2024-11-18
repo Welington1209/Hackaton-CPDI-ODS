@@ -6,7 +6,7 @@ const AgroTipsPage = () => {
   return (
     <Tips
       tipsData={agroTipsData}
-      prevRoute="/water/video"
+      prevRoute="/agriculture/video"
       nextRoute="/agriculture/quiz"
     />
   );

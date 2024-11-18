@@ -11,7 +11,7 @@ const initialState = {
   isGameOver: false,
   shuffledQuestions: [],
   incorrectThemes: [],
-  recentScores: [],
+  scoreBoard: [],
 };
 
 const quizReducer = (state, action) => {
@@ -28,7 +28,7 @@ const quizReducer = (state, action) => {
         score: 0,
         shuffledQuestions,
         incorrectThemes: [],
-        recentScores: state.recentScores,
+        scoreBoard: state.scoreBoard,
       };
     case "NEXT_STEP":
       return {
@@ -46,16 +46,18 @@ const quizReducer = (state, action) => {
     case "GAME_OVER":
       return { ...state, isGameOver: true };
 
-    case "ADD_RECENT_SCORES":
+  
+
+    case "ADD_TO_SCOREBOARD":
       return {
         ...state,
-        recentScores: [...state.recentScores, action.payload],
+        scoreBoard: [...state.scoreBoard, action.payload],
       };
 
     case "RESET_GAME":
       return {
         ...initialState,
-        recentScores: state.recentScores,
+        scoreBoard: state.scoreBoard,
       };
 
     default:

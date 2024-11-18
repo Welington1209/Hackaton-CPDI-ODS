@@ -24,17 +24,7 @@ export const questions = [
     ],
     correctAnswers: [0],
   },
-  {
-    theme: "Água e Saneamento",
-    question: "Quais são alguns dos impactos do manejo inadequado da água?",
-    options: [
-      { text: "Aumento do nível dos oceanos de maneira controlada" },
-      { text: "Melhoria das condições climáticas globais" },
-      { text: "Aumento da produção agrícola em áreas urbanas" },
-      { text: "Degradação ambiental e impactos na biodiversidade" },
-    ],
-    correctAnswers: [3],
-  },
+
   {
     theme: "Video",
     question:
@@ -47,21 +37,10 @@ export const questions = [
     ],
     correctAnswers: [2],
   },
+
   {
     theme: "Video",
-    question:
-      'O estudo denominado "Água Doente" concluiu que o uso de água poluída...',
-    options: [
-      { text: "provoca apenas doenças leves e tratáveis" },
-      { text: "não afeta a qualidade de vida das comunidades" },
-      { text: "mata mais que qualquer forma de violência" },
-      { text: "é menos prejudicial do que o uso de água não tratada" },
-    ],
-    correctAnswers: [2],
-  },
-  {
-    theme: "Video",
-    question: "Quais são as principais fontes de poluição da água?",
+    question: "Cite as duas principais fontes de poluição da água.",
     options: [
       { text: "Excesso de produção de alimentos orgânicos" },
       { text: "Uso de energias renováveis, como solar e eólica" },
@@ -74,12 +53,12 @@ export const questions = [
   },
   {
     theme: "Uso Consciente da Água",
-    question: "Quais as formas de economizar água durante o banho?",
+    question: "Cite duas formas de economizar água durante o banho.",
     options: [
       { text: "Lavar o carro com mangueira enquanto toma banho" },
       { text: "Tomar banhos mais curtos" },
       { text: "Deixar a torneira aberta enquanto ensaboa as mãos" },
-      { text: "usar chuveiro em vez de banheira" },
+      { text: "Usar chuveiro em vez de banheira" },
     ],
     correctAnswers: [1, 3],
   },
@@ -96,132 +75,99 @@ export const questions = [
     ],
     correctAnswers: [0],
   },
+
   {
-    theme: "Uso Consciente da Água",
-    question:
-      "Como você pode usar a água de forma consciente ao lavar o carro?",
+    theme: "Fome Zero",
+    question: "Por que a erradicação da fome é considerada essencial?",
     options: [
-      { text: "Utilizando um balde em vez de uma mangueira" },
-      { text: "Lavando o carro todos os dias" },
-      { text: "Usando a mangueira no máximo para economizar tempo" },
-      { text: "Usando apenas água quente" },
+      { text: "Porque é um desafio político entre os países" },
+      {
+        text: "Porque é fundamental para o desenvolvimento humano e uma sociedade mais justa",
+      },
+      { text: "Porque fortalece o comércio internacional de alimentos" },
+      { text: "Porque incentiva o consumo de alimentos processados" },
     ],
-    correctAnswers: [0],
+    correctAnswers: [1],
   },
 
   {
     theme: "Fome Zero",
-    question: "O que significa o objetivo 'Fome Zero'?",
-    options: [
-      { text: "Reduzir pela metade o número de pessoas famintas no mundo" },
-      {
-        text: "Erradicar a fome e garantir o acesso a alimentos nutritivos para todos",
-      },
-      { text: "Fornecer alimentos apenas para regiões pobres" },
-      { text: "Incentivar a produção de alimentos de origem animal" },
-    ],
-    correctAnswers: [1],
-  },
-  {
-    theme: "Agricultura Sustentável",
     question:
-      "Qual das seguintes práticas NÃO ajuda a promover a agricultura sustentável?",
-    options: [
-      { text: "Uso excessivo de pesticidas e fertilizantes químicos" },
-      { text: "Agricultura de precisão" },
-      { text: "Agroflorestas" },
-      { text: "Rotações de culturas" },
-    ],
-    correctAnswers: [0],
-  },
-  {
-    theme: "Fome Zero",
-    question:
-      "Qual é um dos maiores desafios para alcançar a fome zero até 2030?",
-    options: [
-      { text: "Baixa produtividade agrícola em países ricos" },
-      { text: "Falta de terras agrícolas em zonas rurais" },
-      { text: "Desigualdade no acesso a alimentos e desperdício de alimentos" },
-      { text: "Consumo excessivo de carne" },
-    ],
-    correctAnswers: [2],
-  },
-  {
-    theme: "Sistemas Alimentares",
-    question: "O que são 'sistemas alimentares sustentáveis'?",
-    options: [
-      { text: "Sistemas que dependem apenas de grandes produtores agrícolas" },
-      {
-        text: "Sistemas que promovem a produção e consumo de alimentos que respeitam o meio ambiente, a saúde e o bem-estar social",
-      },
-      { text: "Sistemas que não utilizam fertilizantes orgânicos" },
-      { text: "Sistemas que promovem apenas o consumo de alimentos orgânicos" },
-    ],
-    correctAnswers: [1],
-  },
-  {
-    theme: "Agricultura Sustentável",
-    question: "O que é agricultura de precisão?",
+      "Cite dois motivos pelos quais a agricultura sustentável é importante para alcançar o ODS 2.",
     options: [
       {
-        text: "Um tipo de agricultura em que se utilizam apenas técnicas tradicionais",
+        text: "Promove uma economia rural mais forte",
       },
+
+      { text: "Desestimulando o uso de práticas agrícolas tradicionais" },
+      { text: "Eliminando o uso de tecnologias na agricultura" },
       {
-        text: "O uso de tecnologia para otimizar o uso de insumos e minimizar impactos ambientais",
+        text: "Protege a biodiversidade",
       },
-      { text: "Uma prática de cultivo sem máquinas" },
-      { text: "Agricultura que depende exclusivamente de mão-de-obra humana" },
     ],
-    correctAnswers: [1],
+    correctAnswers: [0, 3],
   },
+
   {
-    theme: "Consumo Consciente",
-    question: "Como o consumo consciente pode contribuir para a fome zero?",
+    theme: "Dicas Agro",
+    question: "Qual é uma prática para evitar o desperdício de alimentos?",
     options: [
+      { text: "Comprar alimentos em grandes quantidades sem planejamento" },
+
       {
-        text: "Reduzindo o desperdício de alimentos e incentivando escolhas de consumo que respeitem os limites ambientais",
+        text: "Descartar alimentos ao atingir a data de validade, mesmo sem sinais de deterioração",
       },
-      { text: "Focando apenas em dietas de baixa caloria" },
-      { text: "Comprando alimentos importados em vez de locais" },
-      { text: "Incentivando o consumo de carne de grandes produtores" },
-    ],
-    correctAnswers: [0],
-  },
-  {
-    theme: "Diversificação de Cultivos",
-    question:
-      "Como a diversificação de cultivos contribui para a sustentabilidade agrícola?",
-    options: [
-      { text: "Reduz o uso de pesticidas e fertilizantes" },
-      { text: "Ajuda a prevenir a degradação do solo" },
-      { text: "Aumenta a resistência às mudanças climáticas" },
-      { text: "Todas as alternativas acima" },
+      { text: "Comer apenas produtos industrializados para evitar sobras" },
+      { text: "Planejar refeições e armazenar alimentos corretamente" },
     ],
     correctAnswers: [3],
   },
   {
-    theme: "Políticas Públicas",
-    question: "Como políticas públicas podem apoiar a agricultura sustentável?",
+    theme: "Dicas Agro",
+    question: "Como você pode apoiar a agricultura sustentável?",
     options: [
-      { text: "Incentivando monoculturas de alto rendimento" },
-      { text: "Oferecendo subsídios para insumos químicos" },
       {
-        text: "Estimulando práticas agrícolas regenerativas e apoiando a agricultura familiar",
+        text: "Comprando alimentos de produtores que utilizam pesticidas intensivamente",
       },
-      { text: "Reduzindo o apoio à agricultura em áreas rurais" },
+      {
+        text: "Valorizando produtos com certificação de sustentabilidade",
+      },
+      { text: "Consumindo apenas produtos importados de grandes empresas" },
+      { text: "Comprando alimentos de produtores que não utilizam pesticidas" },
+    ],
+    correctAnswers: [1, 3],
+  },
+  {
+    theme: "Video Agro",
+    question:
+      "A fome é considerada o principal fator de risco no mundo por quê?",
+    options: [
+      { text: "Porque afeta diretamente o comércio internacional" },
+
+      {
+        text: "Porque está relacionada apenas à falta de alimentos em zonas rurais",
+      },
+
+      {
+        text: "Porque contribui para a desnutrição, doenças e atraso no desenvolvimento humano",
+      },
+      { text: "Porque é um problema exclusivo de países em desenvolvimento" },
     ],
     correctAnswers: [2],
   },
+
   {
-    theme: "Redução da Fome",
+    theme: "Video Agro",
     question:
-      "Qual dessas ações ajuda diretamente a reduzir a fome nas cidades?",
+      "Por que ainda existe tanta fome no mundo, mesmo com a produção de alimentos suficiente para todos?",
     options: [
-      { text: "Construir mais supermercados em áreas centrais" },
-      { text: "Incentivar a produção de hortas urbanas e comunitárias" },
-      { text: "Focar apenas em importações de alimentos" },
-      { text: "Aumentar o preço dos alimentos processados" },
+      {
+        text: "Devido à má distribuição de alimentos, desperdício, pobreza, perdas no transporte e problemas de cunho político",
+      },
+      { text: "Porque não há terras suficientes para a produção agrícola" },
+      { text: "Porque as pessoas não querem consumir alimentos disponíveis" },
+      { text: "Devido à falta de tecnologia para a produção em larga escala" },
     ],
-    correctAnswers: [1],
+    correctAnswers: [0],
   },
 ];
