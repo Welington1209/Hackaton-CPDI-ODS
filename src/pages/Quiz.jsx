@@ -109,13 +109,13 @@ const Quiz = () => {
     <section className="container">
       {!isGameStarted ? (
         <form onSubmit={handleFormSubmit}>
-          <h3 className="inconsolata-text-medium">
+          <h3 className="inconsolata-text-medium title-container">
             Agora que você já sabe como contribuir para promover o acesso à água
             potável, combater a fome e apoiar a agricultura sustentável, que tal
             colocar esses conhecimentos em prática?
           </h3>
 
-          <h3 className="inconsolata-text-medium">
+          <h3 className="inconsolata-text-medium title-container">
             Preencha os campos abaixo para participar do nosso quiz super
             divertido e repleto de conhecimento!
           </h3>
@@ -293,7 +293,7 @@ const Quiz = () => {
             </div>
 
             <div className="share">
-              <div>
+              <div className="title-share">
                 <h4 className="inconsolata-title">
                   Agora que você já testou seus conhecimentos, que tal
                   compartilhar nas suas redes para que seus amigos possam também
@@ -304,7 +304,7 @@ const Quiz = () => {
               <div className="links-container">
                 <LinkedinShareButton
                   url={url}
-                  title="🌍 Descubra como você pode ajudar o planeta! Explore dicas incríveis para contribuir com os Objetivos de Desenvolvimento Sustentável e teste seus conhecimentos em um quiz divertido. 💡✅"
+                  source="Espaço ODS"
                   hashtag="ODS"
                 >
                   <span className="in button inconsolata-title">
@@ -339,14 +339,16 @@ const Quiz = () => {
         </div>
       ) : (
         <>
-          <h2 className="inconsolata-title">
-            Você já respondeu: {currentStep} de {shuffledQuestions.length}
-          </h2>
-          <h3 className="inconsolata-title">Pontuação: {score}</h3>
+          <div className="header-quiz">
+            <h2 className="inconsolata-title">
+              Você já respondeu: {currentStep} de {shuffledQuestions.length}
+            </h2>
+            <h3 className="inconsolata-title score">Pontuação: {score}</h3>
 
-          <h3 className="inconsolata-text-medium">
-            {currentQuestion.question}
-          </h3>
+            <h3 className="inconsolata-text-medium">
+              {currentQuestion.question}
+            </h3>
+          </div>
 
           <div className="options-container">
             {currentQuestion.options.map((option, index) => (
