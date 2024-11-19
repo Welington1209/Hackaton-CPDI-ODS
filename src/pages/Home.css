@@ -73,7 +73,7 @@
 @media (max-width: 450px) {
   .container-control {
     flex-direction: column;
-    min-width: 85vw;
+    min-width: 80vw;
   }
 
   .title {

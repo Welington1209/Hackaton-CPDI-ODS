@@ -216,3 +216,56 @@ h4 {
   width: 80%;
   margin: auto;
 }
+
+@media (max-width: 450px) {
+  .container {
+    min-width: 95vw;
+    padding: 1rem;
+  }
+  .container form {
+    width: 100%;
+  }
+  .container form .user-data {
+    min-width: 90%;
+  }
+
+  .user-data .button {
+    padding: 0.5rem;
+  }
+
+  .options-container {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 1rem;
+  }
+
+  .options-container > button {
+    font-size: 1rem;
+    width: 47%;
+  }
+
+  .final-score-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .game-over,
+  .share {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .themes-container,
+  .links-container {
+    min-width: 80vw;
+  }
+
+  .share {
+    border-left: none;
+  }
+  .links-container .button {
+    padding: 1rem;
+  }
+}

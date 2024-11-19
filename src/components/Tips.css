@@ -1,5 +1,4 @@
 .tips-content {
-  height: 94vh;
   display: flex;
   flex-direction: row;
 }
@@ -60,6 +59,9 @@
 }
 
 @media (max-width: 450px) {
+  .tips-content {
+    /* min-height: 100vh; */
+  }
   .info-container ul {
     display: flex;
     flex-direction: column;
@@ -67,21 +69,20 @@
 
   .tips-content .info-container li {
     position: relative;
-    background-color: none;
-    background-color: #000;
     color: #fafafa;
+    background-color: #000;
+    min-height: 270px;
   }
 
   .info-container li:before {
-    background-image: url("../../img/ecology-green-svgrepo-com.svg");
     background-position: center;
     background-size: cover;
     position: absolute;
+    background-image: url("../../img/ecology-green-svgrepo-com.svg");
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.3;
     content: "";
   }
 

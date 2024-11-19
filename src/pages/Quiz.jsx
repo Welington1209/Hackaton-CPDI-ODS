@@ -365,7 +365,7 @@ const Quiz = () => {
             ))}
           </div>
           <button
-            className="inconsolata-text-medium button"
+            className="inconsolata-text-medium button btn"
             onClick={handleSubmitAnswer}
           >
             Confirmar Resposta

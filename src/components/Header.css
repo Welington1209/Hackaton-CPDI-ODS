@@ -72,3 +72,21 @@ nav svg {
 .logo-img img:hover {
   scale: 2;
 }
+
+@media (max-width: 450px) {
+  #header {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  #header h1 {
+    font-size: 1.4rem;
+  }
+
+  #header h2 {
+    font-size: 0.9rem;
+  }
+
+  .logo-img img {
+    scale: 1.2;
+  }
+}
