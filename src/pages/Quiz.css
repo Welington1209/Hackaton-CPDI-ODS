@@ -59,6 +59,7 @@ form .user-data {
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
+  gap: .5rem;
 }
 
 .input-control input {
