@@ -73,6 +73,11 @@ nav svg {
   scale: 2;
 }
 
+.logo-container {
+  display: flex;
+  gap: 1rem;
+}
+
 @media (max-width: 450px) {
   #header {
     padding-left: 0.5rem;

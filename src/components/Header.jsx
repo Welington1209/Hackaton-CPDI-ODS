@@ -7,11 +7,13 @@ import Logo from "../img/ecology-green-logo.svg";
 const Header = () => {
   return (
     <header id="header">
-      <Link className="logo-img" to={"/"}>
-        <img src={Logo} alt="imagem do planeta terra" />
-      </Link>
+      <div className="logo-container">
+        <Link className="logo-img" to={"/"}>
+          <img src={Logo} alt="imagem do planeta terra" />
+        </Link>
 
-      <h1 className="inconsolata-title">Espaço ODS</h1>
+        <h1 className="inconsolata-title">Espaço ODS</h1>
+      </div>
       <nav>
         <Link to={"/"} className="link-control inconsolata-title">
           <h2>Home</h2>
