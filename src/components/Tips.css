@@ -17,8 +17,8 @@
 }
 
 .tips-content li {
-  border: 1px solid;
   border-radius: 1rem;
+  border: 1px solid;
   display: flex;
   padding: 0.8rem;
   cursor: pointer;
