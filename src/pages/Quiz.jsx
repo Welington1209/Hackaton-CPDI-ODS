@@ -340,12 +340,14 @@ const Quiz = () => {
       ) : (
         <>
           <div className="header-quiz">
-            <h2 className="inconsolata-title">
+           <div className="steps-container">
+           <h3 className="inconsolata-title current-step">
               Você já respondeu: {currentStep} de {shuffledQuestions.length}
-            </h2>
+            </h3>
             <h3 className="inconsolata-title score">Pontuação: {score}</h3>
+           </div>
 
-            <h3 className="inconsolata-text-medium">
+            <h3 className="inconsolata-text-medium question">
               {currentQuestion.question}
             </h3>
           </div>

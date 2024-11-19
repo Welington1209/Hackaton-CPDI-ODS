@@ -88,8 +88,24 @@ form .user-data {
   align-items: center;
 }
 
-.header-quiz .score {
+.header-quiz .steps-container {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: .5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.header-quiz .score,
+.header-quiz .current-step {
   font-size: 1.4rem;
+}
+
+.header-quiz .question {
+  font-size: 1.5rem;
 }
 
 .options-container {
